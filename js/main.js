@@ -183,15 +183,19 @@
 
   function scheduleScene() {
     if (!root.classList.contains("is-3d")) return;
-    var start = function () {
-      if ("requestIdleCallback" in window) {
-        requestIdleCallback(bootScene, { timeout: 1500 });
-      } else {
-        setTimeout(bootScene, 250);
-      }
-    };
-    if (document.readyState === "complete") start();
-    else window.addEventListener("load", start, { once: true });
+    var started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      bootScene();
+    }
+    // The scene is decoration. Let the text paint first, and start on the
+    // first scroll or tap so a waiting visitor is not staring at a blank gap.
+    window.addEventListener("pointerdown", start, { once: true, passive: true });
+    window.addEventListener("scroll", start, { once: true, passive: true });
+    window.addEventListener("load", function () {
+      setTimeout(start, 1600);
+    }, { once: true });
   }
 
   scheduleScene();

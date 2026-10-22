@@ -2,7 +2,7 @@
   font-family: "Syne";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url("../assets/fonts/syne-latin-600-normal.woff2") format("woff2");
 }
 
@@ -10,7 +10,7 @@
   font-family: "Syne";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url("../assets/fonts/syne-latin-700-normal.woff2") format("woff2");
 }
 
@@ -18,7 +18,7 @@
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("../assets/fonts/outfit-latin-400-normal.woff2") format("woff2");
 }
 
@@ -26,7 +26,7 @@
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url("../assets/fonts/outfit-latin-500-normal.woff2") format("woff2");
 }
 
@@ -34,7 +34,7 @@
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("../assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
 }
 
@@ -656,6 +656,13 @@ h3 {
 .js:not(.is-static) .reveal {
   opacity: 0;
   transform: translateY(22px);
+}
+
+.js:not(.is-static) .hero .reveal,
+.js:not(.is-static) .hero .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .js:not(.is-static) .reveal.is-in {
