@@ -370,6 +370,23 @@ h3 {
   color: var(--paper);
 }
 
+.hero-role {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  color: var(--copper);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.hero .lede + .lede {
+  margin-top: 0.85rem;
+}
+
+.hero-facts {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -546,6 +563,7 @@ h3 {
 .edu h3,
 .project h3 {
   margin-bottom: 0.75rem;
+  line-height: 1.15;
 }
 
 .service p,
@@ -731,7 +749,7 @@ h3 {
   }
 
   .header-cta { display: inline-flex; }
-  .service-list { grid-template-columns: repeat(3, 1fr); }
+  .service-list { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 980px) {

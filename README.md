@@ -10,13 +10,9 @@ python3 -m http.server 4173
 
 Then open http://127.0.0.1:4173/
 
-## Placeholder domain
+## Domain
 
-Canonical, Open Graph, Twitter, JSON-LD, `robots.txt`, and `sitemap.xml` use `https://alex-agyeman.vercel.app/` until Vercel assigns the real URL. Update that host in:
-
-- `index.html`
-- `robots.txt`
-- `sitemap.xml`
+Canonical, Open Graph, Twitter, JSON-LD, `robots.txt`, and `sitemap.xml` use `https://alex-agyeman.vercel.app/`.
 
 ## Privacy
 
